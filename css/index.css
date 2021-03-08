@@ -37,6 +37,7 @@ body {
 #mainWrapper {
   height: 100vh;
   width: auto;
+  margin-top: 2rem;
 }
 
 #loginModal {
