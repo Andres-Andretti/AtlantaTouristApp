@@ -30,7 +30,7 @@ body {
   left: 0;
 }
 
-#navbarNav, #navWrapper, .navbar-brand {
+#navbarNav, #navWrapper, #navMaster, .navbar-brand {
   background-color: slategray !important;
 }
 
