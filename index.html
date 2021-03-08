@@ -23,18 +23,8 @@
 </head>
 
 <body>
-  <input type="text" id="attractions" placeholder="Where to?" required />
-  <button id="submitButton"><b> Get Attraction Details</b></button>
-  <!--Login Wrapper-->
-  <input type='text' id='userEmailInput' placeholder="Email">
-  <input type='password' id='userPassInput' placeholder="Password">
-  <button id='logIn'>Login</button>
-  <button id='logOut' class='hidden'>Logout</button>
-  <button id='signUp'>Create Account</button>
-  <!---->
-  <ul id="detailsUL"></ul>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid" id='navWrapper'>
       <a class="navbar-brand" href="#">Welcome!</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,19 +43,49 @@
           </li>
         </ul>
       </div>
+      <button type="button" class="btn btn-primary hidden" onclick="openModal()" id="loginModal">
+        Sign In
+      </button>
+      <button type="button" class="btn btn-primary hidden" id="logOut">
+        Sign Out
+      </button>
     </div>
-  </nav>
-  </head>
-  <p> Welcome to the great city of Atlanta! From touring the Atlanta Botanical Garden to visiting Centennial Olympic
-    Park, there is no shortage of fun to be had in this amazing city. Check out the latest app featuring ATL's hottest
-    attractions!</p>
 
-  <ul>
-    <p>Quick Facts:</p>
-    <li>Atlanta is the capital of the state of Georgia</li>
-    <li>Founded in 1837</li>
-    <li>Metro Atlanta Population: 5.8 million (2020)</li>
-  </ul>
+  </nav>
+  <div class='container' id='mainWrapper'>
+    </head>
+    <p> Welcome to the great city of Atlanta! From touring the Atlanta Botanical Garden to visiting Centennial Olympic
+      Park, there is no shortage of fun to be had in this amazing city. Check out the latest app featuring ATL's hottest
+      attractions!</p>
+
+    <ul>
+      <p>Quick Facts:</p>
+      <li>Atlanta is the capital of the state of Georgia</li>
+      <li>Founded in 1837</li>
+      <li>Metro Atlanta Population: 5.8 million (2020)</li>
+    </ul>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <!--Login Wrapper-->
+          <div class="loginWrapper">
+            <input type='text' id='userEmailInput' placeholder="Email">
+            <input type='password' id='userPassInput' placeholder="Password">
+          </div>
+          <!---->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal()" id='signUp'>Create Account</button>
+          <button type="button" class="btn btn-primary" onclick="closeModal()" id='logIn'>Sign In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-backdrop fade show" id="backdrop" style="display: none;"></div>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
 
