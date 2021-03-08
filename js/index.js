@@ -31,13 +31,21 @@ auth.onAuthStateChanged((firebaseUser) => {
     userID = firebaseUser.uid;
     userEmailRaw = firebaseUser.email;
     logOut.classList.remove("hidden");
-    submitWrapper.classList.remove("hidden");
-    contentWrapper.classList.remove("hidden");
+    userEmail.classList.add("hidden");
+    userPass.classList.add("hidden");
+    logIn.classList.add("hidden");
+    signUp.classList.add("hidden");
+    //submitWrapper.classList.remove("hidden");
+    //contentWrapper.classList.remove("hidden");
   } else {
     /// If not signed in, hides site content aside from auth field
     console.log("Not signed in");
     logOut.classList.add("hidden");
-    submitWrapper.classList.add("hidden");
-    contentWrapper.classList.add("hidden");
+    userEmail.classList.remove("hidden");
+    userPass.classList.remove("hidden");
+    logIn.classList.remove("hidden");
+    signUp.classList.remove("hidden");
+    //submitWrapper.classList.add("hidden");
+    //contentWrapper.classList.add("hidden");
   }
 });
