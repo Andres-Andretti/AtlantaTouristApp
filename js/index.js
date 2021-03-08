@@ -4,6 +4,7 @@ const userPass = document.getElementById("userPassInput");
 const logIn = document.getElementById("logIn");
 const logOut = document.getElementById("logOut");
 const signUp = document.getElementById("signUp");
+const loginModal = document.getElementById("loginModal");
 
 /// Auth ///
 logIn.addEventListener("click", (e) => {
@@ -35,6 +36,7 @@ auth.onAuthStateChanged((firebaseUser) => {
     userPass.classList.add("hidden");
     logIn.classList.add("hidden");
     signUp.classList.add("hidden");
+    loginModal.classList.add("hidden");
     //submitWrapper.classList.remove("hidden");
     //contentWrapper.classList.remove("hidden");
   } else {
@@ -45,7 +47,28 @@ auth.onAuthStateChanged((firebaseUser) => {
     userPass.classList.remove("hidden");
     logIn.classList.remove("hidden");
     signUp.classList.remove("hidden");
+    loginModal.classList.remove("hidden");
     //submitWrapper.classList.add("hidden");
     //contentWrapper.classList.add("hidden");
   }
 });
+
+function openModal() {
+    document.getElementById("backdrop").style.display = "block"
+    document.getElementById("exampleModal").style.display = "block"
+    document.getElementById("exampleModal").className += "show"
+}
+function closeModal() {
+    document.getElementById("backdrop").style.display = "none"
+    document.getElementById("exampleModal").style.display = "none"
+    document.getElementById("exampleModal").className += document.getElementById("exampleModal").className.replace("show", "")
+}
+// Get the modal
+var modal = document.getElementById('exampleModal');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        closeModal()
+    }
+}
