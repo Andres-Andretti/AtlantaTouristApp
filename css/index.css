@@ -3,6 +3,7 @@ body {
   font-size: 25px;
   margin: 0;
   padding: 0;
+  background-image: url('../assets/background.webp');
 }
 
 .hidden {
