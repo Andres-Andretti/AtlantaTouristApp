@@ -29,6 +29,7 @@ logOut.addEventListener("click", () => {
 auth.onAuthStateChanged((firebaseUser) => {
   if (firebaseUser) {
     /// If user is logged in, stores user ID in a variable and displays site content
+    console.log("Signed in");
     userID = firebaseUser.uid;
     userEmailRaw = firebaseUser.email;
     logOut.classList.remove("hidden");
