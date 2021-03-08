@@ -17,6 +17,14 @@ body {
   color: white !important;
 }
 
+.nav-link:hover {
+  color: darkblue !important;
+}
+
+.navbar-brand:hover {
+  color: darkblue !important;
+}
+
 .loginWrapper {
   top: 0;
   left: 0;
@@ -29,4 +37,22 @@ body {
 #mainWrapper {
   height: 100vh;
   width: auto;
+}
+
+#loginModal {
+  background-color: transparent;
+  border: transparent;
+}
+
+#loginModal:hover {
+  color: darkblue;
+}
+
+#logOut {
+  background-color: transparent;
+  border: transparent;
+}
+
+#logOut:hover {
+  color: darkblue;
 }
