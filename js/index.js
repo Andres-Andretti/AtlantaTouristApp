@@ -1,3 +1,27 @@
+/// Dropdown Constants ///
+const education = document.getElementById("education");
+const recreation = document.getElementById("recreation");
+const dining = document.getElementById("dining");
+const btnEducation = document.getElementById("btnEducation");
+const btnRecreation = document.getElementById("btnRecreation");
+const btnDining = document.getElementById("btnDining");
+
+/// Dropdown Controller ///
+btnEducation.addEventListener("click", (e) => {
+  e.preventDefault();
+  education.classList.toggle("is-active");
+});
+
+btnRecreation.addEventListener("click", (e) => {
+  e.preventDefault();
+  recreation.classList.toggle("is-active");
+});
+
+btnDining.addEventListener("click", (e) => {
+  e.preventDefault();
+  dining.classList.toggle("is-active");
+});
+
 /// Auth Constants ///
 const userEmail = document.getElementById("userEmailInput");
 const userPass = document.getElementById("userPassInput");
@@ -55,21 +79,23 @@ auth.onAuthStateChanged((firebaseUser) => {
 });
 
 function openModal() {
-    document.getElementById("backdrop").style.display = "block"
-    document.getElementById("exampleModal").style.display = "block"
-    document.getElementById("exampleModal").className += "show"
+  document.getElementById("backdrop").style.display = "block";
+  document.getElementById("exampleModal").style.display = "block";
+  document.getElementById("exampleModal").className += "show";
 }
 function closeModal() {
-    document.getElementById("backdrop").style.display = "none"
-    document.getElementById("exampleModal").style.display = "none"
-    document.getElementById("exampleModal").className += document.getElementById("exampleModal").className.replace("show", "")
+  document.getElementById("backdrop").style.display = "none";
+  document.getElementById("exampleModal").style.display = "none";
+  document.getElementById("exampleModal").className += document
+    .getElementById("exampleModal")
+    .className.replace("show", "");
 }
 // Get the modal
-var modal = document.getElementById('exampleModal');
+var modal = document.getElementById("exampleModal");
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-    if (event.target == modal) {
-        closeModal()
-    }
-}
+  if (event.target == modal) {
+    closeModal();
+  }
+};
