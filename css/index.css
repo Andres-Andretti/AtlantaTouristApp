@@ -1,14 +1,45 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 25px;
   margin: 0;
   padding: 0;
-  background-image: url('../assets/background.webp');
-  z-index: 1;
 }
 
-p, h1, h2, li {
-  color: azure;
+select {
+  color: azure !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+option {
+  color: black;
+}
+
+.button {
+  background: transparent !important;
+  border: none !important;
+  color: azure !important;
+}
+
+.button:hover {
+  color: darkblue;
 }
 
 .hidden {
@@ -31,51 +62,24 @@ p, h1, h2, li {
   color: darkblue !important;
 }
 
-.loginWrapper {
-  top: 0;
-  left: 0;
-}
-
-#navbarNav, #navWrapper, #navMaster, .navbar-brand {
-  background-color: slategray !important;
-}
-
-#navMaster {
-  z-index: 10;
-}
+.map-container {
+  width: 80%;
+  min-height: 300px;
+  }
 
 #mainWrapper {
   height: 100vh;
   width: auto;
   margin-top: 2rem;
-  z-index: 9;
-  position: relative;
+
 }
 
-#shader {
-  position: absolute;
+#navWrapper {
+  background-color: blueviolet;
+  position: sticky;
   top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(000, 000, 000, 0.3);
-  z-index: 2;
 }
 
-#loginModal {
-  background-color: transparent;
-  border: transparent;
-}
-
-#loginModal:hover {
-  color: darkblue;
-}
-
-#logOut {
-  background-color: transparent;
-  border: transparent;
-}
-
-#logOut:hover {
-  color: darkblue;
+#textWrapper {
+  word-wrap: break-word;
 }
