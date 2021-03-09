@@ -4,6 +4,11 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('../assets/background.webp');
+  z-index: 1;
+}
+
+p, h1, h2, li {
+  color: azure;
 }
 
 .hidden {
@@ -11,11 +16,11 @@ body {
 }
 
 .nav-link {
-  color: white !important;
+  color: azure !important;
 }
 
 .navbar-brand {
-  color: white !important;
+  color: azure !important;
 }
 
 .nav-link:hover {
@@ -35,10 +40,26 @@ body {
   background-color: slategray !important;
 }
 
+#navMaster {
+  z-index: 10;
+}
+
 #mainWrapper {
   height: 100vh;
   width: auto;
   margin-top: 2rem;
+  z-index: 9;
+  position: relative;
+}
+
+#shader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(000, 000, 000, 0.3);
+  z-index: 2;
 }
 
 #loginModal {
