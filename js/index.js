@@ -1,27 +1,3 @@
-/// Dropdown Constants ///
-const education = document.getElementById("education");
-const recreation = document.getElementById("recreation");
-const dining = document.getElementById("dining");
-const btnEducation = document.getElementById("btnEducation");
-const btnRecreation = document.getElementById("btnRecreation");
-const btnDining = document.getElementById("btnDining");
-
-/// Dropdown Controller ///
-btnEducation.addEventListener("click", (e) => {
-  e.preventDefault();
-  education.classList.toggle("is-active");
-});
-
-btnRecreation.addEventListener("click", (e) => {
-  e.preventDefault();
-  recreation.classList.toggle("is-active");
-});
-
-btnDining.addEventListener("click", (e) => {
-  e.preventDefault();
-  dining.classList.toggle("is-active");
-});
-
 /// Auth Constants ///
 const userEmail = document.getElementById("userEmailInput");
 const userPass = document.getElementById("userPassInput");
