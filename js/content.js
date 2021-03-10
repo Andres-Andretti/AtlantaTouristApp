@@ -25,49 +25,22 @@ logOut.addEventListener("click", () => {
   auth.signOut();
 });
 
-var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
-
-    // Add a click event on each of them
-    $navbarBurgers.forEach(function ($el) {
-      $el.addEventListener('click', function () {
-
-        // Get the target from the "data-target" attribute
-        var target = $el.dataset.target;
-        var $target = document.getElementById(target);
-
-        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
-        $el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-
-      });
-    });
-  }
-
-document.querySelectorAll('.navbar-link').forEach(function(navbarLink){
-  navbarLink.addEventListener('click', function(){
-    navbarLink.nextElementSibling.classList.toggle('is-hidden-mobile');
-  })
-});
-
 /// Comment Constants ///
-const commentSection = document.getElementById('commentSection');
-const commentInput = document.getElementById('commentInput');
-const btnComment = document.getElementById('btnComment');
-const colTitle = document.getElementsByName('title');
+const commentSection = document.getElementById("commentSection");
+const commentInput = document.getElementById("commentInput");
+const btnComment = document.getElementById("btnComment");
+const docTitle = document.querySelector("title");
+const title = docTitle.textContent;
 
 /// Comment Controller ///
-
 function populateComments() {
-  commentSection.innerHTML = ''
-  db.collection("test")
-  .get()
-  .then((snapshot) => {
-    snapshot.forEach((doc) => {
-      let dataRaw = doc.data();
-      let commentData = `
+  commentSection.innerHTML = "";
+  db.collection(title)
+    .get()
+    .then((snapshot) => {
+      snapshot.forEach((doc) => {
+        let dataRaw = doc.data();
+        let commentData = `
           <div class='commentWrapper'>
             <p class='userTitle'>${dataRaw.email}</p>
             <div class='comment'>
@@ -75,23 +48,23 @@ function populateComments() {
             </div>
           </div>
       `;
-      commentSection.innerHTML = commentData
-    })
-  })
+        commentSection.innerHTML = commentData;
+      });
+    });
 }
 
-btnComment.addEventListener('click', (e) => {
+btnComment.addEventListener("click", (e) => {
   e.preventDefault();
-  db.collection("test")
+  db.collection(title)
     .add({
       content: commentInput.value,
-      email: userEmailRaw
+      email: userEmailRaw,
     })
     .then((docRef) => {
       populateComments();
     });
-    populateComments();
-})
+  populateComments();
+});
 
 /// Realtime Listener ///
 auth.onAuthStateChanged((firebaseUser) => {
@@ -112,4 +85,31 @@ auth.onAuthStateChanged((firebaseUser) => {
     //submitWrapper.classList.add("hidden");
     //contentWrapper.classList.add("hidden");
   }
+});
+
+var $navbarBurgers = Array.prototype.slice.call(
+  document.querySelectorAll(".navbar-burger"),
+  0
+);
+
+// Check if there are any navbar burgers
+if ($navbarBurgers.length > 0) {
+  // Add a click event on each of them
+  $navbarBurgers.forEach(function ($el) {
+    $el.addEventListener("click", function () {
+      // Get the target from the "data-target" attribute
+      var target = $el.dataset.target;
+      var $target = document.getElementById(target);
+
+      // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+      $el.classList.toggle("is-active");
+      $target.classList.toggle("is-active");
+    });
+  });
+}
+
+document.querySelectorAll(".navbar-link").forEach(function (navbarLink) {
+  navbarLink.addEventListener("click", function () {
+    navbarLink.nextElementSibling.classList.toggle("is-hidden-mobile");
+  });
 });
