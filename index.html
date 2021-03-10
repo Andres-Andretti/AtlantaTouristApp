@@ -114,9 +114,34 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary hidden" onclick="openModal()" id="loginModal">
-              <strong>Sign in</strong>
-            </a>
+            <div class="dropdown is-hoverable is-right">
+              <div class="dropdown-trigger">
+                <button class="button hidden" aria-haspopup="true" aria-controls="dropdown-menu4" id='signIn'>
+                  <span>Sign in</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-item">
+                    <form>
+                      <div class="loginWrapper">
+                        <input type="text" id="userEmailInput" placeholder="Email" />
+                        <input type="password" id="userPassInput" placeholder="Password" />
+                      </div>
+                      <button type="button" id="signUp">
+                        Create Account
+                      </button>
+                      <button type="button" id="logIn">
+                        Sign In                  
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
             <a class="button is-primary hidden" id="logOut"> Log out </a>
           </div>
         </div>
@@ -138,31 +163,6 @@
       <li>Metro Atlanta Population: 5.8 million (2020)</li>
     </ul>
   </div>
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <!--Login Wrapper-->
-          <div class="loginWrapper">
-            <input type="text" id="userEmailInput" placeholder="Email" />
-            <input type="password" id="userPassInput" placeholder="Password" />
-          </div>
-          <!---->
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" onclick="closeModal()" id="signUp">
-            Create Account
-          </button>
-          <button type="button" class="btn btn-primary" onclick="closeModal()" id="logIn">
-            Sign In
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal-backdrop fade show" id="backdrop" style="display: none"></div>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
 
