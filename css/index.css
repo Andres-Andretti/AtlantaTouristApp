@@ -34,8 +34,6 @@ option {
 
 .button {
   background: transparent !important;
-  border: none !important;
-  color: azure !important;
 }
 
 .button:hover {
@@ -44,22 +42,6 @@ option {
 
 .hidden {
   display: none;
-}
-
-.nav-link {
-  color: azure !important;
-}
-
-.navbar-brand {
-  color: azure !important;
-}
-
-.nav-link:hover {
-  color: darkblue !important;
-}
-
-.navbar-brand:hover {
-  color: darkblue !important;
 }
 
 .map-container {
@@ -75,7 +57,6 @@ option {
 }
 
 #navWrapper {
-  background-color: blueviolet;
   position: sticky;
   top: 0;
 }
