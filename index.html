@@ -1,116 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Georgia Attractions</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
-  <link rel="stylesheet" href="css/index.css" />
-  <title>Georgia Attractions</title>
-</head>
-
-<body>
-  <nav class="navbar" role="navigation" aria-label="main navigation" id="navWrapper">
-    <div class="navbar-brand">
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <button class="button is-medium">Home</button>
-      <div class="dropdown" id="education">
-        <div class="dropdown-trigger">
-          <button class="button is-medium" aria-haspopup="true" aria-controls="dropdown-menu" id="btnEducation">
-            <span>Education</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
-        <div class="dropdown-menu" id="dropdown-menu" role="menu">
-          <div class="dropdown-content">
-            <a href="education/aquarium.html" class="dropdown-item">
-              Georgia Aquarium
-            </a>
-            <a href="education/cnn.html" class="dropdown-item">
-              CNN Studio
-            </a>
-            <a href="education/coke.html" class="dropdown-item">
-              World of Coca-Cola
-            </a>
-            <a href="education/cyclorama.html" class="dropdown-item">
-              Atlanta Cyclorama</a>
-            <a href="education/museum-delta.html" class="dropdown-item">
-              Delta Flight Museum</a>
-            <a href="education/museum-nat.html" class="dropdown-item">
-              Fernbank Museum</a>
-            <a href="education/zoo.html" class="dropdown-item">
-              Zoo Atlanta</a>
-          </div>
-        </div>
-      </div>
-      <div class="dropdown" id="recreation">
-        <div class="dropdown-trigger">
-          <button class="button is-medium" aria-haspopup="true" aria-controls="dropdown-menu" id="btnRecreation">
-            <span>Dining</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
-        <div class="dropdown-menu" id="dropdown-menu" role="menu">
-          <div class="dropdown-content">
-            <a href="dining/grille.html" class="dropdown-item">
-              The Capital Grille
-            </a>
-            <a href="dining/mr-everything.html" class="dropdown-item">
-              Mr. Everything</a>
-            <a href="dining/ponce.html" class="dropdown-item">
-              Ponce City Market</a>
-            <a href="dining/spondivits.html" class="dropdown-item">
-              Spondivits
-            </a>
-            <a href="dining/vegan.html" class="dropdown-item">
-              Slutty Vegan Atl
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="dropdown" id="dining">
-        <div class="dropdown-trigger">
-          <button class="button is-medium" aria-haspopup="true" aria-controls="dropdown-menu" id="btnDining">
-            <span>Recreation</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
-        <div class="dropdown-menu" id="dropdown-menu" role="menu">
-          <div class="dropdown-content">
-            <a href="recreation/beltline.html" class="dropdown-item">
-              Atlanta Beltline
-            </a>
-            <a href="dining/botannical.html" class="dropdown-item">
-              Atlanta Botannical Garden
-            </a>
-            <a href="recreation/centennial.html" class="dropdown-item">
-              Centennial Olympic Park</a>
-            <a href="recreation/mlkpark.html" class="dropdown-item">
-              MLK Jr Park
-            </a>
-            <hr class="dropdown-divider" />
-            <a href="recreation/sixflags.html" class="dropdown-item">
-              Six Flags over Georgia</a>
-          </div>
-        </div>
+  <body>
+    <nav
+      class="navbar"
+      role="navigation"
+      aria-label="main navigation"
+      id="navWrapper"
+    >
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
 
+      <div id="navbarBasicExample" class="navbar-menu">
+        <button class="button is-medium">Home</button>
+        <div class="dropdown" id="education">
+          <div class="dropdown-trigger">
+            <button
+              class="button is-medium"
+              aria-haspopup="true"
+              aria-controls="dropdown-menu"
+              id="btnEducation"
+            >
+              <span>Education</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="aquarium.html" class="dropdown-item">
+                Georgia Aquarium
+              </a>
+              <a href="cnn.html" class="dropdown-item"> CNN Studio </a>
+              <a href="coke.html" class="dropdown-item"> World of Coca-Cola </a>
+              <a href="cyclorama.html" class="dropdown-item">
+                Atlanta Cyclorama</a
+              >
+              <a href="museum-delta.html" class="dropdown-item">
+                Delta Flight Museum</a
+              >
+              <a href="museum-nat.html" class="dropdown-item">
+                Fernbank Museum</a
+              >
+              <a href="zoo.html" class="dropdown-item"> Zoo Atlanta</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown" id="recreation">
+          <div class="dropdown-trigger">
+            <button
+              class="button is-medium"
+              aria-haspopup="true"
+              aria-controls="dropdown-menu"
+              id="btnRecreation"
+            >
+              <span>Dining</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="grille.html" class="dropdown-item">
+                The Capital Grille
+              </a>
+              <a href="mr-everything.html" class="dropdown-item">
+                Mr. Everything</a
+              >
+              <a href="ponce.html" class="dropdown-item"> Ponce City Market</a>
+              <a href="spondivits.html" class="dropdown-item"> Spondivits </a>
+              <a href="vegan.html" class="dropdown-item"> Slutty Vegan Atl </a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown" id="dining">
+          <div class="dropdown-trigger">
+            <button
+              class="button is-medium"
+              aria-haspopup="true"
+              aria-controls="dropdown-menu"
+              id="btnDining"
+            >
+              <span>Recreation</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="beltline.html" class="dropdown-item">
+                Atlanta Beltline
+              </a>
+              <a href="botannical.html" class="dropdown-item">
+                Atlanta Botannical Garden
+              </a>
+              <a href="centennial.html" class="dropdown-item">
+                Centennial Olympic Park</a
+              >
+              <a href="mlkpark.html" class="dropdown-item"> MLK Jr Park </a>
+              <hr class="dropdown-divider" />
+              <a href="sixflags.html" class="dropdown-item">
+                Six Flags over Georgia</a
+              >
+            </div>
+          </div>
+        </div>
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
@@ -146,6 +167,21 @@
           </div>
         </div>
       </div>
+    </nav>
+    <div id="shader"></div>
+    <div class="container" id="mainWrapper">
+      <p>
+        Welcome to the great city of Atlanta! From touring the Atlanta Botanical
+        Garden to visiting Centennial Olympic Park, there is no shortage of fun
+        to be had in this amazing city. Check out the latest app featuring ATL's
+        hottest attractions!
+      </p>
+      <ul>
+        <p>Quick Facts:</p>
+        <li>Atlanta is the capital of the state of Georgia</li>
+        <li>Founded in 1837</li>
+        <li>Metro Atlanta Population: 5.8 million (2020)</li>
+      </ul>
     </div>
   </nav>
   <div id="shader"></div>
@@ -166,27 +202,26 @@
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
 
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
 
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyAfZvfg04f6UujhO_WemkcL62fnKon00TM",
-      authDomain: "atlantatouristapp.firebaseapp.com",
-      projectId: "atlantatouristapp",
-      storageBucket: "atlantatouristapp.appspot.com",
-      messagingSenderId: "582507840389",
-      appId: "1:582507840389:web:f8c7997bd36fbe6f263aec",
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    // initialize firestore database
-    var db = firebase.firestore();
-    var auth = firebase.auth();
-  </script>
-  <script src="js/index.js"></script>
-</body>
-
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAfZvfg04f6UujhO_WemkcL62fnKon00TM",
+        authDomain: "atlantatouristapp.firebaseapp.com",
+        projectId: "atlantatouristapp",
+        storageBucket: "atlantatouristapp.appspot.com",
+        messagingSenderId: "582507840389",
+        appId: "1:582507840389:web:f8c7997bd36fbe6f263aec",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // initialize firestore database
+      var db = firebase.firestore();
+      var auth = firebase.auth();
+    </script>
+    <script src="js/index.js"></script>
+  </body>
 </html>
