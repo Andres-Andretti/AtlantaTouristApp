@@ -4,7 +4,7 @@ const userPass = document.getElementById("userPassInput");
 const logIn = document.getElementById("logIn");
 const logOut = document.getElementById("logOut");
 const signUp = document.getElementById("signUp");
-const loginModal = document.getElementById("loginModal");
+const signIn = document.getElementById("signIn");
 
 /// Auth ///
 logIn.addEventListener("click", (e) => {
@@ -25,6 +25,73 @@ logOut.addEventListener("click", () => {
   auth.signOut();
 });
 
+var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        // Get the target from the "data-target" attribute
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+document.querySelectorAll('.navbar-link').forEach(function(navbarLink){
+  navbarLink.addEventListener('click', function(){
+    navbarLink.nextElementSibling.classList.toggle('is-hidden-mobile');
+  })
+});
+
+/// Comment Constants ///
+const commentSection = document.getElementById('commentSection');
+const commentInput = document.getElementById('commentInput');
+const btnComment = document.getElementById('btnComment');
+
+/// Comment Controller ///
+
+function populateComments() {
+  commentSection.innerHTML = ''
+  db.collection("test")
+  .get()
+  .then((snapshot) => {
+    snapshot.forEach((doc) => {
+      let dataRaw = doc.data();
+      let commentData = `
+          <div class='commentWrapper'>
+            <p class='userTitle'>${dataRaw.email}</p>
+            <div class='comment'>
+                <p><small>${dataRaw.content}</small></p>
+            </div>
+          </div>
+      `;
+      commentSection.innerHTML = commentData
+    })
+  })
+}
+
+btnComment.addEventListener('click', (e) => {
+  e.preventDefault();
+  db.collection("test")
+    .add({
+      content: commentInput.value,
+      email: userEmailRaw
+    })
+    .then((docRef) => {
+      populateComments();
+    });
+    populateComments();
+})
+
 /// Realtime Listener ///
 auth.onAuthStateChanged((firebaseUser) => {
   if (firebaseUser) {
@@ -33,43 +100,15 @@ auth.onAuthStateChanged((firebaseUser) => {
     userID = firebaseUser.uid;
     userEmailRaw = firebaseUser.email;
     logOut.classList.remove("hidden");
-    userEmail.classList.add("hidden");
-    userPass.classList.add("hidden");
-    logIn.classList.add("hidden");
-    signUp.classList.add("hidden");
-    loginModal.classList.add("hidden");
+    signIn.classList.add("hidden");
     //submitWrapper.classList.remove("hidden");
     //contentWrapper.classList.remove("hidden");
   } else {
     /// If not signed in, hides site content aside from auth field
     console.log("Not signed in");
     logOut.classList.add("hidden");
-    userEmail.classList.remove("hidden");
-    userPass.classList.remove("hidden");
-    logIn.classList.remove("hidden");
-    signUp.classList.remove("hidden");
-    loginModal.classList.remove("hidden");
+    signIn.classList.remove("hidden");
     //submitWrapper.classList.add("hidden");
     //contentWrapper.classList.add("hidden");
   }
 });
-
-function openModal() {
-    document.getElementById("backdrop").style.display = "block"
-    document.getElementById("exampleModal").style.display = "block"
-    document.getElementById("exampleModal").className += "show"
-}
-function closeModal() {
-    document.getElementById("backdrop").style.display = "none"
-    document.getElementById("exampleModal").style.display = "none"
-    document.getElementById("exampleModal").className += document.getElementById("exampleModal").className.replace("show", "")
-}
-// Get the modal
-var modal = document.getElementById('exampleModal');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        closeModal()
-    }
-}
