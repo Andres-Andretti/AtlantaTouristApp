@@ -14,175 +14,133 @@
 </head>
 
 <body>
-  <nav
-      class="navbar"
-      role="navigation"
-      aria-label="main navigation"
-      id="navWrapper"
-    >
-      <div class="navbar-brand">
-        <a
-          role="button"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
+  <nav class="navbar" id="navWrapper">
+    <div class='navbar-brand'>
+      <div class='navbar-burger burger' data-target="navbarMain">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </div>
-
-      <div id="navbarBasicExample" class="navbar-menu">
-        <a href='../index.html' class="button is-medium">
+    </div>
+    <div id="navbarMain" class="navbar-menu">
+      <div class='navbar-start'>
+        <a href='../index.html' class="navbar-item">
           Home
         </a>
-        <div class="dropdown is-hoverable" id="education">
-          <div class="dropdown-trigger">
-            <button
-              class="button is-medium"
-              aria-haspopup="true"
-              aria-controls="dropdown-menu"
-              id="btnEducation"
-            >
-              <span>Education</span>
-              <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-            </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            <div class="dropdown-content">
-              <a href="../education/aquarium.html" class="dropdown-item">
-                Georgia Aquarium
-              </a>
-              <a href="../education/cnn.html" class="dropdown-item">
-                CNN Studio
-              </a>
-              <a href="../education/coke.html" class="dropdown-item">
-                World of Coca-Cola
-              </a>
-              <a href="../education/cyclorama.html" class="dropdown-item">
-                Atlanta Cyclorama</a
-              >
-              <a href="../education/museum-delta.html" class="dropdown-item">
-                Delta Flight Museum</a
-              >
-              <a href="../education/museum-nat.html" class="dropdown-item">
-                Fernbank Museum</a
-              >
-              <a href="../education/zoo.html" class="dropdown-item">
-                Zoo Atlanta</a
-              >
-            </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class='navbar-link' href='#'>
+            Education
+          </a>
+          <div class="navbar-dropdown is-hidden-mobile is-boxed">
+            <a class='navbar-item' href='../education/aquarium.html'>
+              Georgia Aquarium
+            </a>
+            <a href="../education/cnn.html" class="navbar-item">
+              CNN Studio
+            </a>
+            <a href="../education/coke.html" class="navbar-item">
+              World of Coca-Cola
+            </a>
+            <a href="../education/cyclorama.html" class="navbar-item">
+              Atlanta Cyclorama
+            </a>
+            <a href="../education/museum-delta.html" class="navbar-item">
+              Delta Flight Museum
+            </a>
+            <a href="../education/museum-nat.html" class="navbar-item">
+              Fernbank Museum
+            </a>
+            <a href="../education/zoo.html" class="navbar-item">
+              Zoo Atlanta
+            </a>
           </div>
         </div>
-        <div class="dropdown is-hoverable" id="dining">
-          <div class="dropdown-trigger">
-            <button
-              class="button is-medium"
-              aria-haspopup="true"
-              aria-controls="dropdown-menu"
-              id="btnDining"
-            >
-              <span>Dining</span>
-              <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-            </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            <div class="dropdown-content">
-              <a href="../dining/grille.html" class="dropdown-item">
-                The Capital Grille
-              </a>
-              <a href="../dining/mr-everything.html" class="dropdown-item">
-                Mr. Everything</a
-              >
-              <a href="../dining/ponce.html" class="dropdown-item">
-                Ponce City Market</a
-              >
-              <a href="../dining/spondivits.html" class="dropdown-item">
-                Spondivits
-              </a>
-              <a href="../dining/vegan.html" class="dropdown-item">
-                Slutty Vegan Atl
-              </a>
-            </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class='navbar-link' href='#'>
+            Dining
+          </a>
+        <div class="navbar-dropdown is-hidden-mobile is-boxed">
+            <a href="../dining/grille.html" class="navbar-item">
+              The Capital Grille
+            </a>
+            <a href="../dining/mr-everything.html" class="navbar-item">
+              Mr. Everything
+            </a>
+            <a href="../dining/ponce.html" class="navbar-item">
+              Ponce City Market
+            </a>
+            <a href="../dining/spondivits.html" class="navbar-item">
+              Spondivits
+            </a>
+            <a href="../dining/vegan.html" class="navbar-item">
+              Slutty Vegan Atl
+            </a>
           </div>
         </div>
-        <div class="dropdown is-hoverable" id="recreation">
-          <div class="dropdown-trigger">
-            <button
-              class="button is-medium"
-              aria-haspopup="true"
-              aria-controls="dropdown-menu"
-              id="btnRecreation"
-            >
-              <span>Recreation</span>
-              <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-            </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            <div class="dropdown-content">
-              <a href="../recreation/beltline.html" class="dropdown-item">
-                Atlanta Beltline
-              </a>
-              <a href="../recreation/botannical.html" class="dropdown-item">
-                Atlanta Botannical Garden
-              </a>
-              <a href="../recreation/centennial.html" class="dropdown-item">
-                Centennial Olympic Park</a
-              >
-              <a href="../recreation/mlkpark.html" class="dropdown-item">
-                MLK Jr Park
-              </a>
-              <hr class="dropdown-divider" />
-              <a href="../recreation/sixflags.html" class="dropdown-item">
-                Six Flags over Georgia</a
-              >
-            </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class='navbar-link' href='#'>
+            Recreation
+          </a>  
+        <div class="navbar-dropdown is-hidden-mobile is-boxed">
+            <a href="../recreation/beltline.html" class="navbar-item">
+              Atlanta Beltline
+            </a>
+            <a href="../recreation/botannical.html" class="navbar-item">
+              Atlanta Botannical Garden
+            </a>
+            <a href="../recreation/centennial.html" class="navbar-item">
+              Centennial Olympic Park
+            </a>
+            <a href="../recreation/mlkpark.html" class="navbar-item">
+              MLK Jr Park
+            </a>
+            <a href="../recreation/sixflags.html" class="navbar-item">
+              Six Flags over Georgia
+            </a>
           </div>
         </div>
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <div class="dropdown is-hoverable is-right">
-              <div class="dropdown-trigger">
-                <button class="button hidden" aria-haspopup="true" aria-controls="dropdown-menu4" id='signIn'>
-                  <span>Sign in</span>
-                  <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </button>
-              </div>
-              <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                <div class="dropdown-content">
-                  <div class="dropdown-item">
-                    <form>
-                      <div class="loginWrapper">
-                        <input type="text" id="userEmailInput" placeholder="Email" />
-                        <input type="password" id="userPassInput" placeholder="Password" />
-                      </div>
-                      <button type="button" id="signUp">
-                        Create Account
-                      </button>
-                      <button type="button" id="logIn">
-                        Sign In                  
-                      </button>
-                    </form>
-                  </div>
+      </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <div class="dropdown is-hoverable is-right">
+            <div class="dropdown-trigger">
+              <button class="button hidden" aria-haspopup="true" aria-controls="dropdown-menu4" id='signIn'>
+                <span>Sign in</span>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+              <div class="dropdown-content">
+                <div class="navbar-item">
+                  <form>
+                    <div class="loginWrapper">
+                      <input type="text" id="userEmailInput" placeholder="Email" />
+                      <input type="password" id="userPassInput" placeholder="Password" />
+                    </div>
+                    <button type="button" id="signUp">
+                      Create Account
+                    </button>
+                    <button type="button" id="logIn">
+                      Sign In
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
-            <a class="button is-primary hidden" id="logOut"> Log out </a>
           </div>
+          <button class="button hidden" aria-haspopup="true" aria-controls="dropdown-menu4" id="logOut">
+            <span>Log out</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+          </button>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
   <div class='content is-flex is-flex-direction-column is-justify-content-center is-align-items-center has-text-centered' id='mainWrapper'>
       <div class="columns is-flex is-flex-direction-column is-justify-content-center is-align-items-center" id='contentWrapper'>
           <h1>Delta Flight Museum</h1>
