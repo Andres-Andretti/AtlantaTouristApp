@@ -47,6 +47,7 @@ option {
 
 .button {
   background: transparent !important;
+  border: transparent !important;
 }
 
 .button:hover {
@@ -105,6 +106,13 @@ option {
   bottom: 0;
   position: static;
   overflow: hidden;
+}
+
+#element-toggle {
+  display: none;
+}
+#element-toggle:checked ~ #myModal {
+  display: flex;
 }
 
 /* Background Image */
