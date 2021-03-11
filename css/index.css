@@ -45,22 +45,8 @@ option {
   color: black;
 }
 
-.button {
-  background: transparent !important;
-  border: transparent !important;
-}
-
-.button:hover {
-  color: darkblue;
-}
-
 .hidden {
   display: none;
-}
-
-.map-container {
-  width: 80%;
-  min-height: 300px;
 }
 
 .userTitle {
@@ -82,6 +68,20 @@ option {
   justify-content: flex-start;
   align-items: flex-start;
   border-bottom: solid 1px gray;
+  margin-bottom: 1rem;
+}
+
+.hero-body {
+  max-width: 800px;
+}
+
+.hero-head {
+  font-size: 1.5rem;
+}
+
+.modal-content {
+  height: 80vh;
+  width: 80vw;
 }
 
 #mainWrapper {
@@ -115,17 +115,10 @@ option {
   display: flex;
 }
 
-/* Background Image */
-.has-bg-img {
-  background: linear-gradient(rgba(172, 83, 83, 0.3), rgba(160, 68, 68, 0.3)),
-    url("/assets/background.webp") center center;
-  background-size: cover;
+#commentInputBtn {
+  border: black solid 1px !important;
 }
 
-.hero-body {
-  max-width: 800px;
-}
-
-.hero-head {
-  font-size: 1.5rem;
+#map {
+  height: 100%;
 }
