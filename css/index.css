@@ -25,6 +25,10 @@ body {
   font-size: 25px;
   margin: 0;
   padding: 0;
+  background-color: #f5cac3;
+}
+html {
+  background-color: #f5cac3;
 }
 
 select {
@@ -32,6 +36,7 @@ select {
   border: none !important;
   background: transparent !important;
 }
+
 option {
   color: black;
 }
