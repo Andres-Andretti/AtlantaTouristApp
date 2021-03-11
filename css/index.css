@@ -32,15 +32,6 @@ select {
   border: none !important;
   background: transparent !important;
 }
-.navbar-brand {
-  background-color: #b5838d;
-}
-.colored {
-  background-color: #b5838d;
-}
-/* #navbarMain {
-  background-color: #b5838d;
-} */
 option {
   color: black;
 }
