@@ -25,6 +25,10 @@ body {
   font-size: 25px;
   margin: 0;
   padding: 0;
+  background-color: #f5cac3;
+}
+html {
+  background-color: #f5cac3;
 }
 
 select {
@@ -35,12 +39,12 @@ select {
 .navbar-brand {
   background-color: #b5838d;
 }
-.colored {
-  background-color: #b5838d;
-}
-/* #navbarMain {
+/* .colored {
   background-color: #b5838d;
 } */
+#navbarMain.navbar-menu {
+  background-color: #b5838d;
+}
 option {
   color: black;
 }
