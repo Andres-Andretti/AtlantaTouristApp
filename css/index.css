@@ -98,3 +98,18 @@ option {
   position: static;
   overflow: hidden;
 }
+
+/* Background Image */
+.has-bg-img {
+  background: linear-gradient(rgba(172, 83, 83, 0.3), rgba(160, 68, 68, 0.3)),
+    url("/assets/background.webp") center center;
+  background-size: cover;
+}
+
+.hero-body {
+  max-width: 800px;
+}
+
+.hero-head {
+  font-size: 1.5rem;
+}
