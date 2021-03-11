@@ -100,46 +100,22 @@
         </div>
       </div>
     <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <div class="dropdown is-hoverable is-right">
-            <div class="dropdown-trigger">
-              <button class="button hidden" aria-haspopup="true" aria-controls="dropdown-menu4" id='signIn'>
-                <span>Sign in</span>
-                <span class="icon is-small">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-              <div class="dropdown-content">
-                <div class="navbar-item">
-                  <form>
-                    <div class="loginWrapper">
-                      <input type="text" id="userEmailInput" placeholder="Email" />
-                      <input type="password" id="userPassInput" placeholder="Password" />
-                    </div>
-                    <button type="button" id="signUp">
-                      Create Account
-                    </button>
-                    <button type="button" id="logIn">
-                      Sign In
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="button hidden" aria-haspopup="true" aria-controls="dropdown-menu4" id="logOut">
-            <span>Log out</span>
-          <span class="icon is-small">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-          </button>
-        </div>
+      <div class="navbar-item has-dropdown is-hoverable hidden" id='signIn'>
+        <a class='navbar-link' href="#">
+          Sign in
+        </a>
+      <div class="navbar-dropdown is-hidden-mobile is-boxed is-right">
+        <input type="text" id="userEmailInput" placeholder="Email">
+        <input type="password" id="userPassInput" placeholder="Password">
+        <button type="button" id="signUp">Sign up</button>
+        <button type="button" id="logIn">Sign in</button>
       </div>
-    </div>
+      </div>
+      <div class="navbar-item">
+      <button class='button is-large hidden' id='logOut'>Log out</button>
+      </div>
   </nav>
+
   <section
     class='hero is-fullheight-with-navbar is-justify-content-center is-align-items-center has-text-centered has-bg-img'>
     <div= class='hero-head'>
