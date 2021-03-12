@@ -14,3 +14,5 @@ The Google Maps API was utilized to display maps of each tourist destination. If
 <li><b>External API:</b> Google Maps </li>
 
 <li><b>Authors:</b> Andres Corredor, Zachary Murphy, Layton Avery, Tyler Gilchrist</li>
+
+https://atlantatouristapp.web.app/education/aquarium.html
