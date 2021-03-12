@@ -7,7 +7,7 @@ It answers the question of "What is there to do in Atlanta?" and would help new 
 the navigation bar in order to access each page for the type of activity that interests them.</li>
 
 <li><b>Features:</b> A curated tourist guide, this site features dining destinations, educational museums, gardens, and theme parks.
-The Google Maps API was utilized to display maps of each tourist destination. If a user chooses to log in, they may leave a comment about each destination.</li>
+The Google Maps API was utilized to display maps of each tourist destination.</li>
 
 <li><b>Featured programs:</b> HTML, CSS, Bulma, and JavaScript.</li>
 
